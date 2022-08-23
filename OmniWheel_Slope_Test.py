@@ -27,6 +27,7 @@ for i in range (50000):
     if ycord == oby and testingx == obx:
         if testingx >= firstx and testingx <= Secondx:
             print('True Block')
+            break
         else:
             print('On slope but not Between Values')
         testingx = testingx + 0.5
