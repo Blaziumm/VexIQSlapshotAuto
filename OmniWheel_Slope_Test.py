@@ -1,39 +1,37 @@
 #Vex Omni Wheel Slope Test
 #Made by Evan Wirzburger
 #Team 21037A
+#X,Y
+firstcords = [0, 0]
+goingcords = [2, 2, 3, 3]
+funcrepeat = len(goingcords)//2
+def slopealg():
+    curentcords = 0
+    ob = [1, 1]
+    firstcordx = firstcords[0]
+    firstcordy = firstcords[1]
+    goingx = goingcords[curentcords]
+    goingy = goingcords[curentcords + 1]
+    xchange = goingx - firstcordx
+    ychange = goingy - firstcordy
+    slope = ychange//xchange
 
-#Cords Set Up
-#This is your current Coords
-firstx = 0
-firsty = 0
-#This is the Coords you are going to (Turning into a list)
-Secondx = 1
-Secondy = 1
-#Obsticals (Turning into a list)
-obx = 1
-oby = 1
+    repeat = int(xchange//0.5)
+    testingx = float(firstcordx)
+    for i in range (repeat):
+        if testingx == ob[0]:
+            if slope * testingx == ob[1]:
+                print('Block')
 
-#Slope Calculations
-changeinx = firstx - Secondx
-changeiny = firsty - Secondy
-slope = changeiny//changeinx
+        testingx += 0.5
+        i += 1
+        print('x', testingx)
+        print('i', i)
 
-#Loop Prep
-testingx = changeinx
-repeatamount = Secondx
+    curentcords += 2
+                
 
-for i in range (50000):
-    ycord = slope * testingx
-    if ycord == oby and testingx == obx:
-        if testingx >= firstx and testingx <= Secondx:
-            print('True Block')
-            break
-        else:
-            print('On slope but not Between Values')
-        testingx = testingx + 0.5
-        i = i + 1
-        break
-    testingx = testingx + 1
-    i = i + 1
-        
 
+for l in range (funcrepeat):
+    slopealg()
+    l += 1
