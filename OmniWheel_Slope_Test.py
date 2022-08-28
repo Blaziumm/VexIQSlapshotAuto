@@ -1,9 +1,7 @@
-#Vex Omni Wheel Slope Test
-#Made by Evan Wirzburger
-#Team 21037A
 #X,Y
+#No Decimals
 firstcords = [0, 0]
-goingcords = [2, 2, 3, 3]
+goingcords = [3, 3, 3, 3, 4, 4]
 funcrepeat = len(goingcords)//2
 def slopealg():
     curentcords = 0
@@ -18,15 +16,29 @@ def slopealg():
 
     repeat = int(xchange//0.5)
     testingx = float(firstcordx)
-    for i in range (repeat):
-        if testingx == ob[0]:
-            if slope * testingx == ob[1]:
-                print('Block')
 
-        testingx += 0.5
-        i += 1
-        print('x', testingx)
-        print('i', i)
+    for i in range (repeat):
+        if testingx >= goingcords[curentcords]:
+            break
+        else:
+            if testingx == ob[0]:
+                if slope * testingx == ob[1]:
+                    if testingx >= firstcords[0] and testingx <= goingcords[curentcords]:
+                        print('Block')
+                    else:
+                        xmove = goingcords[curentcords] - firstcords[0]
+                        xmove = goingcords[curentcords + 1] - firstcords[1]
+
+                        firstcords[0] == goingcords[curentcords]
+                        firstcords[1] == goingcords[curentcords + 1]
+
+                        #PID.Drive.distance(xmove)
+                        #PID.Drive.dostance(ymove)
+                        
+            testingx += 0.5
+            i += 1
+            print('x', testingx)
+            print('i', i)
 
     curentcords += 2
                 
