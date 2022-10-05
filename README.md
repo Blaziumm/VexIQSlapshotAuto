@@ -3,3 +3,5 @@ Hello, My name is Blazium, but you can call me Evan, this repository is our code
 Slapshot Auto. We went big this year and decided on a algorithum to decide the best way to navigate
 the board. If you have any questions, feel free to leave a comment or issue, or DM on twitter, 
 @Blaziumm.
+
+Thanks
