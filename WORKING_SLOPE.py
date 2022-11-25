@@ -1,3 +1,5 @@
+#Made by Evan Wirzburger
+#Made in Python 3 IDLE
 #X,Y
 #No Decimals
 goingcords = [3, 3]
