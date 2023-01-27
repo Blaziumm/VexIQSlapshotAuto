@@ -1,0 +1,7 @@
+while True:
+      print("Y")
+      print("{:.0f}".format(brain.timer.time(MSEC)))
+      print(",")
+      print("{:.2f}".format(rmotor.velocity(PERCENT)))
+      print(",")
+      print("{:.2f}".format(lmotor.velocity(PERCENT))
