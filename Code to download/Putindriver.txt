@@ -1,7 +1,20 @@
+IF USING 2 MOTORS
 while True:
-      print("Y")
-      print("{:.0f}".format(brain.timer.time(MSEC)))
-      print(",")
-      print("{:.2f}".format(rmotor.velocity(PERCENT)))
-      print(",")
-      print("{:.2f}".format(lmotor.velocity(PERCENT))
+      print("Y", end="")
+      print("{:.0f}".format(brain.timer.time(MSEC)), end="")
+      print(",", end="")
+      print("{:.2f}".format(rmotor.velocity(PERCENT)), end="")
+      print(",", end="")
+      print("{:.2f}".format(lmotor.velocity(PERCENT)))
+      
+IF USING A CONFIGURED DRIVETRAIN
+
+while True:
+      print("Y", end="")
+      print("{:.0f}".format(brain.timer.time(MSEC)), end="")
+      print(",", end="")
+      print("{:.2f}".format(left_drive_smart.velocity(PERCENT)), end="")
+      print(",", end="")
+      print("{:.2f}".format(left_drive_smart.velocity(PERCENT)))
+
+
